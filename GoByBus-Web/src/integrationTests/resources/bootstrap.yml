@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: GoByBus-Web
+  profiles.active: integartion-test
+  cloud.config.enabled: false

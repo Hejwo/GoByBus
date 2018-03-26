@@ -1,0 +1,50 @@
+apply plugin: 'scala'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+test {
+    testLogging.showStandardStreams = true
+}
+
+dependencies {
+    def sparkVersion = '2.2.0'
+    compile(
+            'org.scala-lang:scala-library:2.11.8',
+
+            'com.esri.geometry:esri-geometry-api:1.2.1',
+            'com.github.nscala-time:nscala-time_2.9.1:1.4.0',
+
+            'org.json4s:json4s-native_2.11:3.5.1',
+
+            'com.fasterxml.jackson.core:jackson-core:2.6.7',
+            'com.fasterxml.jackson.core:jackson-databind:2.6.7',
+
+            'org.slf4j:slf4j-log4j12:1.8.0-beta0',
+            'ch.qos.logback:logback-classic:1.1.5'
+    )
+
+    compile group: 'org.mongodb.spark', name: 'mongo-spark-connector_2.11', version: '2.2.0'
+
+    compile('org.json4s:json4s-jackson_2.11:3.5.1') {
+        exclude group: "com.fasterxml.jackson.core"
+    }
+    compile('org.apache.spark:spark-core_2.11:' + sparkVersion) {
+        exclude group: "com.fasterxml.jackson.core"
+    }
+    compile('org.apache.spark:spark-mllib_2.11:' + sparkVersion) {
+        exclude group: "com.fasterxml.jackson.core"
+    }
+    compile('org.apache.spark:spark-sql_2.11:' + sparkVersion) {
+        exclude group: "com.fasterxml.jackson.core"
+    }
+
+    testCompile(
+            'junit:junit:4.12',
+            'org.scalatest:scalatest_2.11:2.2.6',
+            'org.scala-lang.modules:scala-xml_2.11:1.0.5'
+    )
+
+}

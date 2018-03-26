@@ -1,0 +1,101 @@
+version: '3.1'
+
+services:
+
+  gobybus-configserver:
+    image: gobybus_gobybus-configserver
+    build: ./GoByBus-ConfigServer/build/docker
+    mem_limit: 900m
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "8888:8888"
+    environment:
+     APP_PORT: 8888
+     JAVA_OPTIONS: '-Xmx500m -XX:MaxMetaspaceSize=100m'
+    volumes:
+     - "/opt/tmp/goByBus-configserver/:/tmp"
+
+  gobybus-locationcrawler:
+    image: gobybus_gobybus-locationcrawler
+    build: ./GoByBus-LocationCrawler/build/docker
+    mem_limit: 500m
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "8080:8080"
+     - "14096:14096"
+    env_file: kafka.properties
+    environment:
+     APP_PORT: 8080
+     JAVA_OPTIONS: '-Xmx300m -XX:MaxMetaspaceSize=60m'
+     CONFIG_SERVER_URI: "http://gobybus-configserver:8888"
+    volumes:
+     - "/opt/tmp/goByBus-locationcrawler/:/tmp"
+    depends_on:
+      - kafka
+
+  gobybus-locationviewer:
+    image: gobybus_gobybus-locationviewer
+    build: ./GoByBus-LocationViewer/build/docker
+    mem_limit: 500m
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "8081:8081"
+     - "14097:14096"
+    env_file:
+     - kafka.properties
+     - locations-mongo.properties
+    environment:
+     APP_PORT: 8081
+     JAVA_OPTIONS: '-Xmx300m -XX:MaxMetaspaceSize=60m'
+     KAFKA_LOCATION_GROUP: positionViewers
+    volumes:
+     - "/opt/tmp/goByBus-locationviewer/:/tmp"
+     - "/opt/tmp/goByBus-locationcrawler/:/tmp"
+    depends_on:
+      - kafka
+      - locations-mongo
+
+  locations-mongo:
+    build: ./GoByBus-Dockerfiles/gobybus-locations-mongo
+    mem_limit: 1G
+    restart: always
+    ports:
+     - "27017:27017"
+    env_file: locations-mongo.properties
+    volumes:
+     - "/opt/tmp/goByBus-locations-mongo/:/tmp"
+     - "~/gobybus-data:/data/"
+
+  kafka:
+    image: spotify/kafka
+    mem_limit: 2G
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "2181:2181"
+     - "9092:9092"
+    hostname: kafka
+    environment:
+      ADVERTISED_HOST: kafka
+      ADVERTISED_PORT: 9092
+      TERM: xterm
+    volumes:
+     - "/opt/tmp/goByBus-kafka/:/tmp"
+
+  portainer:
+    image: portainer/portainer
+    restart: always
+    privileged: true
+    ports:
+      - 9000:9000
+    command: --templates http://templates/templates.json
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer/data:/data

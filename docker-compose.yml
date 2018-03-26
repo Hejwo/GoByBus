@@ -1,0 +1,146 @@
+version: '2'
+services:
+
+  gobybus-configserver:
+    image: gobybus_gobybus-configserver
+    mem_limit: 900m
+    cap_add:
+      - SYS_PTRACE
+    ports:
+     - "8888:8888"
+     - "14095:14096"
+     - "4011:4001"
+    environment:
+     APP_PORT: 8888
+    volumes:
+     - "/opt/tmp/goByBus-configserver/:/tmp"
+     - "/opt/tmp/goByBus-configserver/logs:/tmp/goByBus-configServer/logs"
+
+  gobybus-locationcrawler:
+    image: gobybus_gobybus-locationcrawler
+    mem_limit: 500m
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "8080:8080"
+     - "14096:14096"
+     - "4021:4001"
+    env_file: kafka.properties
+    environment:
+     APP_PORT: 8080
+     CONFIG_SERVER_URI: "http://gobybus-configserver:8888"
+    env_file: secret-keys.properties
+    volumes:
+     - "/opt/tmp/goByBus-locationcrawler/:/tmp"
+     - "/opt/tmp/goByBus-locationcrawler/logs:/tmp/goByBus-locationCrawler/logs"
+    depends_on:
+      - kafka
+
+  gobybus-busstopcrawler:
+    image: gobybus_gobybus-busstopcrawler
+    mem_limit: 500m
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "8085:8085"
+     - "14097:14096"
+    env_file:
+     - "locations-mongo.properties"
+     - "secret-keys.properties"
+    environment:
+     APP_PORT: 8085
+     JAVA_OPTIONS: '-Xmx300m -XX:MaxMetaspaceSize=60m'
+     CONFIG_SERVER_URI: "http://gobybus-configserver:8888"
+    volumes:
+     - "/opt/tmp/goByBus-busstopcrawler/:/tmp"
+     - "/opt/tmp/goByBus-busstopcrawler/logs:/tmp/goByBus-BusStopCrawler/logs"
+    depends_on:
+      - locations-mongo
+
+  gobybus-locationviewer:
+    image: gobybus_gobybus-locationviewer
+    mem_limit: 500m
+    cap_add:
+      - SYS_PTRACE
+    ports:
+     - "8081:8081"
+     - "14098:14096"
+     - "4031:4001"
+    env_file:
+     - kafka.properties
+     - locations-mongo.properties
+    environment:
+     APP_PORT: 8081
+     KAFKA_LOCATION_GROUP: positionViewers
+    volumes:
+     - "/opt/tmp/goByBus-locationviewer/:/tmp"
+     - "/opt/tmp/goByBus-locationviewer/logs:/tmp/goByBus-locationviewer/logs"
+    depends_on:
+      - kafka
+      - locations-mongo
+
+  locations-mongo:
+    build: ./GoByBus-Dockerfiles/gobybus-locations-mongo
+    mem_limit: 1G
+    ports:
+     - "27017:27017"
+    env_file: locations-mongo.properties
+    volumes:
+     - "/opt/tmp/goByBus-locations-mongo/:/tmp"
+     - "~/gobybus-data:/data/"
+
+  gobybus-web:
+    image: gobybus_gobybus-web
+    mem_limit: 800m
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "8090:8090"
+     - "14099:14096"
+     - "4041:4001"
+    env_file: locations-mongo.properties
+    environment:
+     APP_PORT: 8090
+     CONFIG_SERVER_URI: "http://gobybus-configserver:8888"
+    volumes:
+     - "/opt/tmp/goByBus-web/:/tmp"
+     - "/opt/tmp/goByBus-web/logs:/tmp/goByBus-web/logs"
+
+  kafka:
+    image: spotify/kafka
+    mem_limit: 2G
+    ports:
+     - "2181:2181"
+     - "9092:9092"
+    hostname: kafka
+    environment:
+      ADVERTISED_HOST: kafka
+      ADVERTISED_PORT: 9092
+      TERM: xterm
+    volumes:
+     - "/opt/tmp/goByBus-kafka/:/tmp"
+
+  elk:
+    image: sebp/elk
+    mem_limit: 5G
+    restart: always
+    privileged: true
+    environment:
+      TZ: "Europe/Warsaw"
+      ES_JAVA_OPTS: "-Xms4g -Xmx4g"
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+
+  portainer:
+    image: portainer/portainer
+    ports:
+      - 9000:9000
+    command: --templates http://templates/templates.json
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer/data:/data

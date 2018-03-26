@@ -1,0 +1,15 @@
+{
+  "id": "374cb363-82b8-482c-a7c0-25987b267573",
+  "request": {
+    "url": "/api/action/wsstore_get/?id=c7238cfe-8b1f-4c38-bb4a-de386db7e776&apikey=correct-locations-1",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{ \"result\": [ { \"Brigade\": \"1   \", \"FirstLine\": \"9  \", \"Lat\": 52.1761093, \"Lines\": \"9              \", \"Lon\": 20.9438667, \"LowFloor\": false, \"Status\": \"RUNNING\", \"Time\": \"2017-09-04T12:40:59\" }, { \"Brigade\": \"4   \", \"FirstLine\": \"26 \", \"Lat\": 52.2447357, \"Lines\": \"26             \", \"Lon\": 21.0845108, \"LowFloor\": false, \"Status\": \"RUNNING\", \"Time\": \"2017-09-04T12:40:55\" }]}"
+  },
+  "uuid": "374cb363-82b8-482c-a7c0-25987b267573"
+}

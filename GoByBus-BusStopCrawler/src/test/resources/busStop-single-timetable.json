@@ -1,0 +1,1712 @@
+{
+  "result": [
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "04:49:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "05:19:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "1"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "05:49:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "2"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "06:08:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "3"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "06:28:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "06:43:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "08"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "06:55:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "07:10:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "6"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "07:25:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "1"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "07:40:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "07"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "07:55:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "2"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "08:10:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "3"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "08:25:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "08:40:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "08"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "08:55:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "09:14:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "6"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "09:34:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "1"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "09:54:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "2"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "10:14:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "3"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "10:34:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "10:54:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "11:14:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "6"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "11:34:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "1"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "11:54:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "2"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "12:14:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "3"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "12:34:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "12:54:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "13:14:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "6"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "13:34:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "1"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "13:52:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "07"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "14:07:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "2"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "14:22:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "3"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "14:37:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "14:52:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "08"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "15:07:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "15:22:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "6"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "15:37:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "09"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "15:52:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "1"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "16:07:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "07"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "16:22:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "2"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "16:37:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "3"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "16:52:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "17:07:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "08"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "17:22:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "17:37:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "6"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "17:52:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "09"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "18:07:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "1"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "18:22:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "07"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "18:39:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "2"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "18:56:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "3"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "19:11:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "19:26:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "08"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "19:44:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "20:04:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "6"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "20:24:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "1"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "20:44:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "2"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "21:04:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "3"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "21:25:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "4"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "21:49:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "5"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "22:19:00"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "symbol_2",
+          "value": "null"
+        },
+        {
+          "key": "symbol_1",
+          "value": "null"
+        },
+        {
+          "key": "brygada",
+          "value": "6"
+        },
+        {
+          "key": "kierunek",
+          "value": "Dw.Wschodni (Lubelska)"
+        },
+        {
+          "key": "trasa",
+          "value": "TP-DWL"
+        },
+        {
+          "key": "czas",
+          "value": "22:49:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+application:
+  version: 0.0.1-early
+
+openData:
+  warsawApi:
+    url: https://api.um.warszawa.pl
+    key: ${WARSAW_API_KEY}

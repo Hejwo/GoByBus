@@ -1,0 +1,8 @@
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+image: java:8
+
+pipelines:
+  default:
+    - step:
+        script:
+          - ./gradlew clean build

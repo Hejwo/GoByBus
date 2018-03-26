@@ -1,0 +1,15 @@
+{
+  "id": "374cb363-82b8-482c-a7c0-25987b267573",
+  "request": {
+    "url": "/api/action/dbtimetable_get?id=88cd555f-6f31-43ca-9de4-66c479ad5942&busstopId=1001&busstopNr=01&apikey=correct-apiKey",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"result\":[{\"values\":[{\"value\":\"135\",\"key\":\"linia\"}]}]}"
+  },
+  "uuid": "374cb363-82b8-482c-a7c0-25987b267573"
+}

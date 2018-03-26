@@ -1,0 +1,5 @@
+openData:
+  warsawApi:
+    location:
+      crawler:
+        cron: '0/5 * * * * *'

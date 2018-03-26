@@ -1,0 +1,112 @@
+{
+  "result": [
+    {
+      "values": [
+        {
+          "key": "zespol",
+          "value": "1001"
+        },
+        {
+          "key": "slupek",
+          "value": "01"
+        },
+        {
+          "key": "nazwa_zespolu",
+          "value": "Kijowska"
+        },
+        {
+          "key": "id_ulicy",
+          "value": "2201"
+        },
+        {
+          "key": "szer_geo",
+          "value": "52.248678"
+        },
+        {
+          "key": "dlug_geo",
+          "value": "21.044226"
+        },
+        {
+          "key": "kierunek",
+          "value": "al.Zieleniecka"
+        },
+        {
+          "key": "obowiazuje_od",
+          "value": "2016-10-01 00:00:00.0"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "zespol",
+          "value": "1001"
+        },
+        {
+          "key": "slupek",
+          "value": "02"
+        },
+        {
+          "key": "nazwa_zespolu",
+          "value": "Kijowska"
+        },
+        {
+          "key": "id_ulicy",
+          "value": "2201"
+        },
+        {
+          "key": "szer_geo",
+          "value": "52.249071"
+        },
+        {
+          "key": "dlug_geo",
+          "value": "21.044530"
+        },
+        {
+          "key": "kierunek",
+          "value": "Ząbkowska"
+        },
+        {
+          "key": "obowiazuje_od",
+          "value": "2016-10-01 00:00:00.0"
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "key": "zespol",
+          "value": "1001"
+        },
+        {
+          "key": "slupek",
+          "value": "03"
+        },
+        {
+          "key": "nazwa_zespolu",
+          "value": "Kijowska"
+        },
+        {
+          "key": "id_ulicy",
+          "value": "2201"
+        },
+        {
+          "key": "szer_geo",
+          "value": "52.248998"
+        },
+        {
+          "key": "dlug_geo",
+          "value": "21.043983"
+        },
+        {
+          "key": "kierunek",
+          "value": "al.Zieleniecka"
+        },
+        {
+          "key": "obowiazuje_od",
+          "value": "2016-10-01 00:00:00.0"
+        }
+      ]
+    }
+  ]
+}

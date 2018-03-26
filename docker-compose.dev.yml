@@ -1,0 +1,17 @@
+version: '2'
+services:
+
+  gobybus-configserver:
+    build: ./GoByBus-ConfigServer/build/docker
+
+  gobybus-locationcrawler:
+    build: ./GoByBus-LocationCrawler/build/docker
+
+  gobybus-locationviewer:
+    build: ./GoByBus-LocationViewer/build/docker
+
+  locations-mongo:
+    build: ./GoByBus-Dockerfiles/gobybus-locations-mongo
+
+  gobybus-web:
+    build: ./GoByBus-Web/build/docker

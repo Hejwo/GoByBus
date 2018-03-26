@@ -1,0 +1,27 @@
+server:
+  port: 8095
+
+spring:
+  profiles.active: native
+  application:
+    name: GoByBus-BusStopCrawler
+  cloud:
+    config:
+        uri: 'http://localhost:8888'
+        fail-fast: true
+        enabled: false
+
+openData.warsawApi:
+  url: 'http://localhost:1111'
+  key: 'aaa'
+  busStop.crawler.actors:
+    busStopsDownload:
+      downloadEveryNDays: 3
+      initialDelay: '800 milliseconds'
+      interval: '2 minutes'
+    busStopLinesDownload:
+      initialDelay: '10 seconds'
+      delayForNext: '3 seconds'
+    timetableDownload:
+      initialDelay: '10 seconds'
+      delayForNext: '10 seconds'

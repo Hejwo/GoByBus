@@ -1,0 +1,15 @@
+spring:
+  profiles.active: integartion-test
+  cloud.config.enabled: false
+
+server:
+  port: 1221
+
+kafka:
+  newLocation:
+      bootstrap.servers: localhost:2112
+      topic: test-topic-1
+      acks: 1
+      retires: 0
+      timeout: 5000
+

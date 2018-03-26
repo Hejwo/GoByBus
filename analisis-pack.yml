@@ -1,0 +1,100 @@
+version: '2'
+services:
+
+  gobybus-configserver:
+    image: gobybus_gobybus-configserver
+    mem_limit: 900m
+    cap_add:
+      - SYS_PTRACE
+    ports:
+     - "8888:8888"
+     - "14095:14096"
+     - "4011:4001"
+    environment:
+     APP_PORT: 8888
+    volumes:
+     - "/opt/tmp/goByBus-configserver/:/tmp"
+     - "/opt/tmp/goByBus-configserver/logs:/tmp/goByBus-configServer/logs"
+
+  locations-mongo:
+    build: ./GoByBus-Dockerfiles/gobybus-locations-mongo
+    mem_limit: 1G
+    ports:
+     - "27017:27017"
+    env_file: locations-mongo.properties
+    volumes:
+     - "/opt/tmp/goByBus-locations-mongo/:/tmp"
+     - "~/gobybus-data:/data/"
+
+  gobybus-web:
+    image: gobybus_gobybus-web
+    mem_limit: 800m
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "8090:8090"
+     - "14098:14096"
+     - "4041:4001"
+    env_file: locations-mongo.properties
+    environment:
+     APP_PORT: 8090
+     CONFIG_SERVER_URI: "http://gobybus-configserver:8888"
+    volumes:
+     - "/opt/tmp/goByBus-web/:/tmp"
+     - "/opt/tmp/goByBus-web/logs:/tmp/goByBus-web/logs"
+
+  airflow:
+      build: ./GoByBus-Dockerfiles/gobybus-airflow
+      mem_limit: 1G
+      ports:
+       - "4440:8080"
+
+  spark-master:
+    image: gettyimages/spark
+    command: bin/spark-class org.apache.spark.deploy.master.Master -h spark-master
+    hostname: spark-master
+    environment:
+      MASTER: spark://spark-master:7077
+      SPARK_CONF_DIR: /conf
+      SPARK_PUBLIC_DNS: localhost
+    ports:
+      - 9040:4040
+      - 9066:6066
+      - 9077:7077
+      - 9080:8080
+
+  spark-worker:
+    image: gettyimages/spark
+    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    hostname: spark-worker
+    environment:
+      SPARK_CONF_DIR: /conf
+      SPARK_WORKER_CORES: 2
+      SPARK_WORKER_MEMORY: 1g
+      SPARK_WORKER_PORT: 8881
+      SPARK_WORKER_WEBUI_PORT: 8081
+      SPARK_PUBLIC_DNS: localhost
+    links:
+      - spark-master
+    ports:
+      - 9181:8081
+
+  zeppelin:
+    image: dylanmei/zeppelin
+    ports:
+      - "8080:8080"
+    volumes:
+      - "~/gobybus-zeppelin/notebook:/usr/zeppelin/notebook"
+      - "~/gobybus-zeppelin/data:/usr/zeppelin/data"
+    links:
+      - spark-master
+
+  portainer:
+    image: portainer/portainer
+    ports:
+      - 9000:9000
+    command: --templates http://templates/templates.json
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer/data:/data

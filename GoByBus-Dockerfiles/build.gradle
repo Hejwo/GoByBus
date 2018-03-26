@@ -1,0 +1,31 @@
+task prepareDockers(type: Exec) {
+    group 'deployment'
+
+    ignoreExitValue true
+    dependsOn 'prepareMongo'
+    dependsOn 'prepareAirflow'
+}
+
+task prepareSpark(type: Exec) {
+    group 'deployment'
+
+    ignoreExitValue true
+    workingDir 'gobyBus-sparkStandalone'
+    commandLine 'docker', 'build', '.', '-t', 'gobybus-sparkstandalone'
+}
+
+task prepareMongo(type: Exec) {
+    group 'deployment'
+
+    ignoreExitValue true
+    workingDir 'gobybus-locations-mongo'
+    commandLine 'docker', 'build', '.', '-t', 'gobybus_locations-mongo'
+}
+
+task prepareAirflow(type: Exec) {
+    group 'deployment'
+
+    ignoreExitValue true
+    workingDir 'gobybus-airflow'
+    commandLine 'docker', 'build', '.', '-t', 'gobybus_airflow'
+}

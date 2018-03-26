@@ -1,0 +1,97 @@
+apply plugin: 'java'
+apply plugin: 'docker'
+apply plugin: "io.spring.dependency-management"
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+buildscript {
+    ext {
+        springBootVersion = '1.4.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath('io.spring.gradle:dependency-management-plugin:0.5.4.RELEASE')
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+    }
+}
+
+jar {
+    baseName = 'GoByBus-ConfigServer'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+test {
+    testLogging.showStandardStreams = true
+}
+
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-config-server'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j', version: '1.3.8.RELEASE'
+
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Camden.SR5"
+    }
+}
+
+configurations {
+    compile.exclude module: 'spring-boot-starter-logging'
+}
+
+springBoot {
+    mainClass = "org.hejwo.gobybus.configserver.ConfigServerApp"
+}
+
+task image(type: Docker, dependsOn: assemble){
+    push = false
+    tag = "${project.group}_${applicationName}".toLowerCase()
+    dockerfile = file('docker/Dockerfile')
+    doFirst{
+        copy {
+            from jar
+            from 'docker'
+            into stageDir
+        }
+    }
+}
+
+task buildImage() {
+    group 'deployment'
+
+    dependsOn 'clean'
+    dependsOn 'build'
+    dependsOn 'image'
+    tasks.findByName('build').mustRunAfter 'clean'
+    tasks.findByName('image').mustRunAfter 'build'
+}
+
+task reloadContainer(type: Exec) {
+    group 'deployment'
+
+    dependsOn 'killContainer'
+    ignoreExitValue true
+    workingDir '..'
+    commandLine 'docker-compose', 'up', '-d'
+}
+
+task killContainer(type: Exec) {
+    group 'deployment'
+    dependsOn 'buildImage'
+
+    ignoreExitValue true
+    workingDir '..'
+    commandLine 'docker-compose', 'kill', jar.baseName.toLowerCase()
+}

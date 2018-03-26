@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html data-ng-app="goByBusApp">
+<!--https://github.com/allenhwkim/angularjs-google-maps/blob/master/testapp/marker-clusterer.html-->
+<!--https://stackoverflow.com/questions/35417562/how-to-auto-open-infowindow-on-marker-on-ngmap-load-->
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>GoByBus - Lines Preview</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="http://cdn.rawgit.com/nmccready/angular-simple-logger/master/dist/angular-simple-logger.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.1/lodash.js" type="text/javascript"></script>
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="scripts/ng-map.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script src="scripts/app.js"></script>
+
+    <script src="scripts/services/linesService.js"></script>
+
+    <script src="scripts/controllers/mapController.js"></script>
+    <script src="scripts/controllers/lineController.js"></script>
+    <script src="scripts/controllers/pointController.js"></script>
+</head>
+<body>
+
+<div id="queryPart">
+
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Lines">
+            <div ng-controller="lineController" class="min-height:490px;">
+                <div class="spinner1Div" ng-show="spinner.active">
+                    <img id="spinner1" src="images/spinner1.gif" height="96" width="96"/>
+                </div>
+
+                <div layout="row" layout-align="space-between center">
+                    <div layout="row" layout-align="space-between start" style="height: 85px">
+                        <input type="text" class="form-control" uib-datepicker-popup="yyyy-MM-dd"
+                               ng-model="selections.date"
+                               datepicker-options="datePopup.options"
+                               readonly="readonly"
+                               is-open="datePopup.opened"
+                               ng-change="updateLinesForDay()"/>
+                        <button type="button" class="btn btn-success" ng-disabled="datePopup.disabled" ng-click="datePopup.open()">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div layout="row" layout-align="space-between center">
+                    <md-select ng-model="selections.lines.selected" ng-change="updateBrigadesForLine()" placeholder="Line number">
+                        <md-option ng-repeat="line in selections.lines.all" ng-value="line">{{line}}</md-option>
+                    </md-select>
+                </div>
+
+                <div layout="row" layout-align="space-between center">
+                    <md-select ng-model="selections.brigades.selected" ng-change="updateMap()" placeholder="Brigade number">
+                        <md-option ng-repeat="brigade in selections.brigades.all" ng-value="brigade">{{brigade}}</md-option>
+                    </md-select>
+                </div>
+
+                <!--<md-button layout="row" ng-click="exportDay()" class="md-raised md-primary">Export day</md-button>-->
+            </div>
+        </md-tab>
+
+        <md-tab label="Points">
+            <div ng-controller="pointController">
+            <textarea ng-model="textAreaInput" ng-change="refreshMap()" rows="20"></textarea>
+            <md-checkbox ng-model="hideLine" ng-change="refreshMap()">Hide line</md-checkbox>
+            <md-checkbox ng-model="hidePoints" ng-change="refreshMap()">Hide points</md-checkbox>
+            </div>
+        </md-tab>
+    </md-tabs>
+
+</div>
+
+<div id="map" ng-controller="mapController as vm">
+    <ng-map zoom="12" center="[52.21, 21]" id="map">
+        <info-window id="pointInfo">
+            <div ng-non-bindable>
+                <h5><b>Linia: </b>{{lineInfo.info.line}}</h5>
+                <h5><b>Brygada: </b>{{lineInfo.info.brigade}}</h5>
+                <h5><b>Czas: </b>{{lineInfo.info.time}}</h5>
+            </div>
+        </info-window>
+        <info-window id="customPointInfo">
+            <div ng-non-bindable>
+                <h5>{{lineInfo.details}}</h5>
+            </div>
+        </info-window>
+        <shape name="polyline"
+               path="{{lineInfo.path}}"
+               stroke-color="{{settings.lineStroke.color}}"
+               stroke-weight="{{settings.lineStroke.weight}}">
+        </shape>
+    </ng-map>
+</div>
+
+
+</body>
+</html>

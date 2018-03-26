@@ -1,0 +1,15 @@
+{
+  "id": "374cb363-82b8-482c-a7c0-25987b267573",
+  "request": {
+    "url": "/api/action/wsstore_get/?id=c7238cfe-8b1f-4c38-bb4a-de386db7e776&apikey=general-error-2",
+    "method": "GET"
+  },
+  "response": {
+    "status": 501,
+    "body": "{ \"result\": \"false\", \"error\": \"Nie wiem....\" }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  "uuid": "374cb363-82b8-482c-a7c0-25987b267573"
+}

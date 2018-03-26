@@ -1,0 +1,16 @@
+{
+  "id": "374cb363-82b8-482c-a7c0-25987b267573",
+  "request": {
+    "url": "/api/action/wsstore_get/?id=c7238cfe-8b1f-4c38-bb4a-de386db7e776&apikey=huge-read-delay-1",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "fixedDelayMilliseconds": 20000,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"result\":[{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":21.1188202,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:28\",\"Lat\":52.2381592,\"LowFloor\":true,\"Brigade\":\"3   \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":21.0699177,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:28\",\"Lat\":52.246212,\"LowFloor\":true,\"Brigade\":\"5   \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":21.0542431,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:30\",\"Lat\":52.2387886,\"LowFloor\":true,\"Brigade\":\"2   \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":20.9437351,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:30\",\"Lat\":52.1760597,\"LowFloor\":true,\"Brigade\":\"8   \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":21.0201778,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:28\",\"Lat\":52.2317009,\"LowFloor\":true,\"Brigade\":\"35  \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":20.984621,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:26\",\"Lat\":52.2195511,\"LowFloor\":true,\"Brigade\":\"36  \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":20.968298,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:26\",\"Lat\":52.2338867,\"LowFloor\":true,\"Brigade\":\"6   \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":21.0723438,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:25\",\"Lat\":52.2422523,\"LowFloor\":true,\"Brigade\":\"33  \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":20.9846745,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:28\",\"Lat\":52.2188148,\"LowFloor\":true,\"Brigade\":\"7   \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":20.9845867,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:30\",\"Lat\":52.2188416,\"LowFloor\":true,\"Brigade\":\"9   \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":21.0084019,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:28\",\"Lat\":52.2291412,\"LowFloor\":true,\"Brigade\":\"38  \"},{\"Status\":\"RUNNING\",\"FirstLine\":\"9  \",\"Lon\":21.0029812,\"Lines\":\"9              \",\"Time\":\"2017-09-18T00:58:27\",\"Lat\":52.1888237,\"LowFloor\":true,\"Brigade\":\"32  \"}]}"
+  },
+  "uuid": "374cb363-82b8-482c-a7c0-25987b267573"
+}

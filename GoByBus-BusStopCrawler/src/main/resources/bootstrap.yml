@@ -1,0 +1,20 @@
+server:
+  port: ${APP_PORT}
+
+spring:
+  profiles.active: native
+  application:
+    name: GoByBus-BusStopCrawler
+  cloud:
+    config:
+        uri: ${CONFIG_SERVER_URI:http://localhost:8888}
+        fail-fast: true
+        enabled: true
+
+spring.data:
+  mongodb:
+    host: ${MONGO_HOST}
+    port: ${MONGO_PORT}
+    username: ${MONGODB_USERNAME}
+    password: ${MONGODB_PASSWORD}
+    database: ${MONGODB_DBNAME}

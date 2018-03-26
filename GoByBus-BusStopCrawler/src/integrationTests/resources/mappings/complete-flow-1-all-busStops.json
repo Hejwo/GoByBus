@@ -1,0 +1,15 @@
+{
+  "id": "374cb363-82b8-482c-a7c0-25987b267573",
+  "request": {
+    "url": "/api/action/dbstore_get/?id=ab75c33d-3a26-4342-b36a-6e5fef0a3ac3&apikey=correct-apiKey",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"result\":[{\"values\":[{\"key\":\"zespol\",\"value\":\"1001\"},{\"key\":\"slupek\",\"value\":\"01\"},{\"key\":\"nazwa_zespolu\",\"value\":\"Kijowska\"},{\"key\":\"id_ulicy\",\"value\":\"2201\"},{\"key\":\"szer_geo\",\"value\":\"52.248678\"},{\"key\":\"dlug_geo\",\"value\":\"21.044226\"},{\"key\":\"kierunek\",\"value\":\"al.Zieleniecka\"},{\"key\":\"obowiazuje_od\",\"value\":\"2016-10-01 00:00:00.0\"}]}]}"
+  },
+  "uuid": "374cb363-82b8-482c-a7c0-25987b267573"
+}

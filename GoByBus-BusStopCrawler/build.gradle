@@ -1,0 +1,148 @@
+apply plugin: 'java'
+apply plugin: 'docker'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+buildscript {
+    ext {
+        springBootVersion = '1.5.6.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+jar {
+    baseName = 'GoByBus-BusStopCrawler'
+}
+
+springBoot {
+    mainClass = "org.hejwo.gobybus.busstopcrawler.BusStopApp"
+}
+
+
+configurations {
+    compile.exclude module: 'spring-boot-starter-logging'
+    integrationTestsCompile.extendsFrom testCompile
+    integrationTestsRuntime.extendsFrom testRuntime
+}
+
+sourceSets {
+    integrationTests {
+        java {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+            srcDir file('src/integrationTests/java')
+        }
+        resources.srcDir file('src/integrationTests/resources')
+    }
+}
+
+dependencies {
+    compile project(':GoByBus-Commons')
+
+    // Spring
+    compile 'org.codehaus.groovy:groovy'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    compile 'org.springframework.boot:spring-boot-starter-aop'
+    compile 'org.springframework.cloud:spring-cloud-starter-config'
+    compile 'org.springframework.boot:spring-boot-starter-log4j:1.3.8.RELEASE'
+
+    // Kafka
+    compile group: 'org.apache.kafka', name: 'kafka_2.10', version: '0.10.1.1'
+
+    // Commons
+    compile 'com.typesafe.akka:akka-actor_2.12:2.5.7'
+    compile 'com.typesafe.akka:akka-slf4j_2.12:2.5.7'
+    compile 'com.enragedginger:akka-quartz-scheduler_2.12:1.6.1-akka-2.5.x'
+
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    compile group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
+    compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.0'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.0'
+
+    compile group: 'com.google.guava', name: 'guava', version: '20.0'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.12'
+    compile group: 'io.swagger', name: 'swagger-annotations', version: '1.5.0'
+
+    // Unit tests
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '2.0.2-beta'
+    testCompile group: 'org.assertj', name: 'assertj-core-java8', version: '1.0.0m1'
+    testCompile group: 'com.github.tomakehurst', name: 'wiremock-standalone', version: '2.8.0'
+    testCompile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.0.0'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'com.typesafe.akka:akka-testkit_2.12:2.5.7'
+    testCompile("junit:junit")
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR7"
+    }
+}
+
+task image(type: Docker, dependsOn: assemble) {
+    push = false
+    tag = "${project.group}_${applicationName}".toLowerCase()
+    dockerfile = file('docker/Dockerfile')
+    doFirst {
+        copy {
+            from jar
+            from 'docker'
+            into stageDir
+        }
+    }
+}
+
+task buildImage() {
+    group 'deployment'
+
+    dependsOn 'clean'
+    dependsOn 'build'
+    dependsOn 'image'
+    tasks.findByName('build').mustRunAfter 'clean'
+    tasks.findByName('image').mustRunAfter 'build'
+}
+
+task reloadContainer(type: Exec) {
+    group 'deployment'
+    dependsOn 'killContainer'
+
+    ignoreExitValue true
+    workingDir '..'
+    commandLine 'docker-compose', 'up', '-d', '--no-deps', jar.baseName.toLowerCase()
+}
+
+task killContainer(type: Exec) {
+    group 'deployment'
+    dependsOn 'buildImage'
+
+    ignoreExitValue true
+    workingDir '..'
+    commandLine 'docker-compose', 'kill', jar.baseName.toLowerCase()
+}
+
+task integrationTests(type: Test) {
+    group 'verification'
+    testClassesDir = sourceSets.integrationTests.output.classesDir
+    classpath = sourceSets.integrationTests.runtimeClasspath
+}
+
+check.dependsOn integrationTests
+integrationTests.mustRunAfter test

@@ -1,0 +1,18 @@
+openData.warsawApi:
+  url: 'http://localhost:1111'
+  key: 'aaa'
+  busStop.crawler.actors:
+    busStopsDownload:
+      downloadEveryNDays: 3
+      initialDelay: '300 milliseconds'
+      interval: '5 minutes'
+      maxRetries: 4
+      retriesWindow: '1 minutes'
+    busStopLinesDownload:
+      initialDelay: '2 seconds'
+      delayForNext: '1 seconds'
+    timetableDownload:
+      initialDelay: '2 seconds'
+      delayForNext: '1 seconds'
+    retry:
+      initialDelay: '30 minutes'

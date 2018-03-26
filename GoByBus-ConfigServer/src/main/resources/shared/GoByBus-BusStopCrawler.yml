@@ -1,0 +1,16 @@
+openData.warsawApi.busStop.crawler:
+  actors:
+      busStopsDownload:
+        downloadEveryNDays: 3
+        initialDelay: '1 minutes'
+        interval: '10 hours'
+        maxRetries: 4
+        retriesWindow: '2 minutes'
+      busStopLinesDownload:
+        initialDelay: '20 seconds'
+        delayForNext: '10 seconds'
+      timetableDownload:
+        initialDelay: '5 minutes'
+        delayForNext: '20 seconds'
+      retry:
+        initialDelay: '30 minutes'

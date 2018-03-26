@@ -1,0 +1,38 @@
+server:
+  port: 8095
+
+spring:
+  profiles.active: native
+  application:
+    name: GoByBus-BusStopCrawler
+  cloud:
+    config:
+        uri: 'http://localhost:8888'
+        fail-fast: true
+        enabled: false
+
+spring.data:
+  mongodb:
+    host: localhost
+    port: 27017
+    username: aaa
+    password: aaa123
+    database: locations
+
+openData.warsawApi:
+  url: 'https://api.um.warszawa.pl'
+  key: ${WARSAW_API_KEY}
+  busStop.crawler.actors:
+    busStopsDownload:
+      initialDelay: '800 milliseconds'
+      interval: '10 hours'
+      maxRetries: 4
+      retriesWindow: '2 minutes'
+    busStopLinesDownload:
+      initialDelay: '20 seconds'
+      delayForNext: '8 seconds'
+    timetableDownload:
+      initialDelay: '3 minutes'
+      delayForNext: '20 seconds'
+    retry:
+      initialDelay: '1 minutes'
