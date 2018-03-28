@@ -1,11 +1,30 @@
 version: '2'
 services:
 
+  gobybus-registry:
+    image: gobybus_gobybus-registry
+    mem_limit: 550m
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    ports:
+     - "8761:8761"
+     - "14094:14096"
+     - "4001:4001"
+    environment:
+     APP_PORT: 8761
+     REGESTRY_HOSTNAME: "gobybus-registry"
+     CONFIG_SERVER_URI: "http://gobybus-configserver:8888"
+    volumes:
+     - "/opt/tmp/goByBus-registry/:/tmp"
+     - "/opt/tmp/goByBus-registry/logs:/tmp/goByBus-registry/logs"
+
   gobybus-configserver:
     image: gobybus_gobybus-configserver
     mem_limit: 900m
     cap_add:
       - SYS_PTRACE
+    restart: always
     ports:
      - "8888:8888"
      - "14095:14096"
@@ -26,11 +45,12 @@ services:
      - "8080:8080"
      - "14096:14096"
      - "4021:4001"
-    env_file: kafka.properties
     environment:
      APP_PORT: 8080
      CONFIG_SERVER_URI: "http://gobybus-configserver:8888"
-    env_file: secret-keys.properties
+    env_file:
+      - secret-keys.properties
+      - kafka.properties
     volumes:
      - "/opt/tmp/goByBus-locationcrawler/:/tmp"
      - "/opt/tmp/goByBus-locationcrawler/logs:/tmp/goByBus-locationCrawler/logs"
@@ -46,6 +66,7 @@ services:
     ports:
      - "8085:8085"
      - "14097:14096"
+     - "4031:4001"
     env_file:
      - "locations-mongo.properties"
      - "secret-keys.properties"
@@ -67,13 +88,14 @@ services:
     ports:
      - "8081:8081"
      - "14098:14096"
-     - "4031:4001"
+     - "4041:4001"
     env_file:
      - kafka.properties
      - locations-mongo.properties
     environment:
      APP_PORT: 8081
      KAFKA_LOCATION_GROUP: positionViewers
+     CONFIG_SERVER_URI: "http://gobybus-configserver:8888"
     volumes:
      - "/opt/tmp/goByBus-locationviewer/:/tmp"
      - "/opt/tmp/goByBus-locationviewer/logs:/tmp/goByBus-locationviewer/logs"
@@ -100,7 +122,7 @@ services:
     ports:
      - "8090:8090"
      - "14099:14096"
-     - "4041:4001"
+     - "4051:4001"
     env_file: locations-mongo.properties
     environment:
      APP_PORT: 8090

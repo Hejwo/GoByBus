@@ -33,7 +33,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionThrownBy;
 public class WarsawLocationApiIntegrationTest {
 
     private static final int SERVER_PORT = 1111;
-    private static final int MAX_EXECUTION_TIME = 4000;
+    private static final int MAX_EXECUTION_TIME = 5500;
 
     @ClassRule
     public static WireMockRule wireMockRule = new WireMockRule(options()

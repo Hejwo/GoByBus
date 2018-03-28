@@ -2,17 +2,17 @@ FROM openjdk:8u151-jre
 
 # Developer utils
 ENV TERM xterm
-ENV APP_PORT 8081
+ENV APP_PORT 8889
+
+RUN apt-get update
+RUN apt-get install nano
 
 ### Set timezone
 ENV TIME_ZONE Europe/Warsaw
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 
-RUN apt-get update
-RUN apt-get install nano
-
 ### Prepare files
-ADD GoByBus-LocationViewer.jar app.jar
+ADD GoByBus-Registry.jar app.jar
 RUN sh -c 'touch /app.jar'
 
 ### Install Filebeat
@@ -24,7 +24,7 @@ RUN curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-${
 ADD filebeat.yml /etc/filebeat/
 
 ### Expose volumes and ports
-VOLUME /tmp/goByBus-locationViewer
+VOLUME /tmp/goByBus-configServer
 EXPOSE $APP_PORT
 
 ### Run Filebeat and app.jar

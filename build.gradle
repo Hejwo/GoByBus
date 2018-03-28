@@ -19,8 +19,10 @@ subprojects {
 task buildServiceImages() {
     group 'deployment'
 
-    dependsOn ':GoByBus-BusStopCrawler:buildImage'
     dependsOn ':GoByBus-ConfigServer:buildImage'
+    dependsOn ':GoByBus-Registry:buildImage'
+
+    dependsOn ':GoByBus-BusStopCrawler:buildImage'
     dependsOn ':GoByBus-LocationCrawler:buildImage'
     dependsOn ':GoByBus-LocationViewer:buildImage'
     dependsOn ':GoByBus-Web:buildImage'

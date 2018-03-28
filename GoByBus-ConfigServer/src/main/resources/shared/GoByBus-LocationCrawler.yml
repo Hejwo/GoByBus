@@ -3,3 +3,11 @@ openData:
     location:
       crawler:
         cron: '0/5 * * * * *'
+
+kafka:
+  newLocation:
+    bootstrap.servers: ${KAFKA_HOST}:${KAFKA_PORT}
+    topic: ${KAFKA_LOCATION_TOPIC}
+    acks: 1
+    retires: 0
+    timeout: 5000

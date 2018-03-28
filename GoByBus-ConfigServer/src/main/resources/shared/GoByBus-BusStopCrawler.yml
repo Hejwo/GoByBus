@@ -14,3 +14,11 @@ openData.warsawApi.busStop.crawler:
         delayForNext: '20 seconds'
       retry:
         initialDelay: '30 minutes'
+
+spring.data:
+  mongodb:
+    host: ${MONGO_HOST}
+    port: ${MONGO_PORT}
+    username: ${MONGODB_USERNAME}
+    password: ${MONGODB_PASSWORD}
+    database: ${MONGODB_DBNAME}

@@ -5,3 +5,10 @@ openData:
   warsawApi:
     url: https://api.um.warszawa.pl
     key: ${WARSAW_API_KEY}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://gobybus-registry:8761/eureka/

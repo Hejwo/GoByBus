@@ -9,3 +9,4 @@ include 'SparkPositionAnalyzer'
 
 include 'GoByBus-BusStopCrawler'
 include 'GoByBus-ConfigServer'
+include 'GoByBus-Registry'

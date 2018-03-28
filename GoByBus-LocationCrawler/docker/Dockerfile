@@ -3,10 +3,6 @@ FROM openjdk:8u151-jre
 ENV APP_PORT 8080
 
 ENV TERM xterm
-ENV KAFKA_HOST kafka
-ENV KAFKA_PORT 9092
-ENV KAFKA_LOCATION_TOPIC new_positions
-ENV CONFIG_SERVER_URI "http://gobybus-configserver:8888"
 
 RUN apt-get update
 RUN apt-get install nano

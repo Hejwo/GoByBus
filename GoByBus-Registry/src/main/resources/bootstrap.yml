@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: registry
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URI:http://localhost:8888}
+      fail-fast: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: ${REGESTRY_HOSTNAME:localhost}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+server:
+  port: ${APP_PORT:8761}

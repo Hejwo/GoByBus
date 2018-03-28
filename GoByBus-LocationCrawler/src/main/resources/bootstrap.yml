@@ -10,11 +10,3 @@ spring:
     config:
         uri: ${CONFIG_SERVER_URI:http://localhost:8888}
         fail-fast: true
-
-kafka:
-  newLocation:
-    bootstrap.servers: ${KAFKA_HOST}:${KAFKA_PORT}
-    topic: ${KAFKA_LOCATION_TOPIC}
-    acks: 1
-    retires: 0
-    timeout: 5000

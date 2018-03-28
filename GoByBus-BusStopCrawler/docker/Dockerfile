@@ -4,9 +4,6 @@ FROM openjdk:8u151-jre
 ENV APP_PORT 8082
 
 ENV TERM xterm
-ENV KAFKA_HOST kafka
-ENV KAFKA_PORT 9092
-ENV KAFKA_LOCATION_TOPIC new_positions
 
 RUN apt-get update
 RUN apt-get install nano

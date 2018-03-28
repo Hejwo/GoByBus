@@ -1,0 +1,30 @@
+readPortionCron: '0/5 * * * * *'
+
+kafka:
+  newLocation:
+    bootstrap.servers: ${KAFKA_HOST}:${KAFKA_PORT}
+    topic: ${KAFKA_LOCATION_TOPIC}
+    acks: 1
+    retires: 0
+    timeout: 5000
+
+# Kafka settings
+kafka.newLocation:
+  bootstrap.servers: ${KAFKA_HOST}:${KAFKA_PORT}
+  topic: ${KAFKA_LOCATION_TOPIC}
+  groupId: positionViewers
+  reset.offset: false
+  poll.time.ms: 1000
+  offset.auto.commit: false
+  acks: 1
+  retires: 0
+  timeout: 5000
+
+# Mongo DB
+spring.data:
+  mongodb:
+    host: ${MONGO_HOST}
+    port: ${MONGO_PORT}
+    username: ${MONGODB_USERNAME}
+    password: ${MONGODB_PASSWORD}
+    database: ${MONGODB_DBNAME}

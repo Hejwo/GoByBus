@@ -1,5 +1,7 @@
 package org.hejwo.gobybus.spark.config
 
+import com.typesafe.config.{Config, ConfigFactory}
+
 object SparkConfig {
   private val config = ConfigFactory.load()
   val sparkLogLevel = getConfig(config, "spark.logLevel")

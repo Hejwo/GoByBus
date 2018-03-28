@@ -1,10 +1,7 @@
-server:
-  port: ${APP_PORT}
-
 spring:
   profiles.active: native
   application:
-    name: GoByBus-BusStopCrawler
+    name: GoByBus-LocationViewer
   cloud:
     config:
         uri: ${CONFIG_SERVER_URI:http://localhost:8888}

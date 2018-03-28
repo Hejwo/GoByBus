@@ -1,0 +1,7 @@
+spring.data:
+  mongodb:
+    host: ${MONGO_HOST}
+    port: ${MONGO_PORT}
+    username: ${MONGODB_USERNAME}
+    password: ${MONGODB_PASSWORD}
+    database: ${MONGODB_DBNAME}
